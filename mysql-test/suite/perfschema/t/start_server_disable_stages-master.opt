@@ -1,0 +1,2 @@
+--loose-performance-schema-instrument='stage/%=OFF'
+--loose-performance-schema-max-statement-classes=167
