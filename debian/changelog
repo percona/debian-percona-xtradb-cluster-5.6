@@ -1,0 +1,100 @@
+percona-xtradb-cluster-5.6 (5.6.21-25.8-1) unstable; urgency=medium
+
+  * New upstream version and packaging.
+
+ -- George Ormond Lorch III <george.lorch@percona.com>  Tue, 02 Dec 2014 13:20:01 -0700
+
+percona-xtradb-cluster-5.5 (5.5.37-25.10+dfsg-2) unstable; urgency=medium
+
+  [ Américo Monteiro ]
+  * Portuguese translation for debconf messages (Closes: #748812).
+
+  [ Christian Perrier ]
+  * French translation for debconf messages (Closes: #748884).
+
+  [ Victory ]
+  * Japanese translation for debconf messages (Closes: #750769).
+
+  [ Helge Kreutzmann ]
+  * German translation for debconf messages (Closes: #751573).
+
+  [ James Page ]
+  * d/control: Update Maintainer to pkg-mysql-maint (Closes: #750073, #753748).
+  * d/control: Use iproute2 instead of iproute transitional package
+    (Closes: #753743).
+  * d/control: Disable percona-xtradb-cluster-testsuite* packages as they are
+    non-functional with wsrep and Galera (Closes: #749792).
+
+  [ Plamen Alexandrov ]
+  * d/p/mips-ftbfs.patch: Resolve FTBFS on mips architecture (Closes: #754489).
+
+ -- James Page <james.page@ubuntu.com>  Thu, 17 Jul 2014 12:21:18 +0100
+
+percona-xtradb-cluster-5.5 (5.5.37-25.10+dfsg-1) unstable; urgency=medium
+
+  * New upstream release, including the following security updates:
+    - http://www.oracle.com/technetwork/topics/security/cpuapr2014-1972952.html
+    - CVE-2014-0001
+    - CVE-2014-0384
+    - CVE-2014-2419
+    - CVE-2014-2430
+    - CVE-2014-2431
+    - CVE-2014-2432
+    - CVE-2014-2436
+    - CVE-2014-2438
+    - CVE-2014-2440
+    - http://www.oracle.com/technetwork/topics/security/cpujan2014-1972949.html
+    - CVE-2013-5891
+    - CVE-2013-5908
+    - CVE-2014-0386
+    - CVE-2014-0393
+    - CVE-2014-0401
+    - CVE-2014-0402
+    - CVE-2014-0412
+    - CVE-2014-0420
+    - CVE-2014-0437
+  * Dropped, included in upstream release:
+    - d/patches/CVE-2014-0001.patch
+    - d/patches/fix-implicit-conversion.patch
+    - d/patches/patch-sql_sql__yacc.yy
+  * d/patches/*: Refreshed remaining patches.
+  * d/rules: Update for new upstream release versions.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 20 May 2014 09:00:41 +0100
+
+percona-xtradb-cluster-5.5 (5.5.34-25.9+dfsg-0ubuntu4) trusty; urgency=medium
+
+  * d/p/CVE-2014-0001.patch:
+    - Fix buffer overflow in client/mysql.cc via a long server version string.
+      CVE-2014-0001
+  * d/p/fix_standalone_tests.patch: Cherry pick patch from mysql-* packaging
+    to ensure that MySQL testsuite can be run from /usr/lib/mysql-testsuite.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 18 Mar 2014 17:18:58 +0000
+
+percona-xtradb-cluster-5.5 (5.5.34-25.9+dfsg-0ubuntu3) trusty; urgency=medium
+
+  * d/p/70_mysql_va_list.patch: Cherry pick patch from mysql-5.5 to ensure that
+    va_list usage is portable, fixing FTBFS on armhf and arm64.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 11 Mar 2014 15:24:43 +0000
+
+percona-xtradb-cluster-5.5 (5.5.34-25.9+dfsg-0ubuntu2) trusty; urgency=medium
+
+  * d/control,rules,autoreconf: Use dh-autoreconf to reconfigure UDF and
+    HandlerSocket-Plugin-for-MySQL sub-projects, fixing FTBFS on ppc64el.
+  * d/control: Align Provides/Breaks/Replaces/Conflicts to virtual-mysql-*
+    approach for switching in/out MySQL alternatives.
+  * d/control: Add lsb-release to BD's.
+  * d/additions/pxc.cnf,percona-xtradb-cluster-common-5.5.install: Add PXC
+    specific configuration to /etc/mysql/conf.d to disable MySQL query cache
+    (LP: #1290331).
+  * d/control: Drop dependency on libmysqlclient18 - not used.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 10 Mar 2014 17:31:43 +0000
+
+percona-xtradb-cluster-5.5 (5.5.34-25.9+dfsg-0ubuntu1) trusty; urgency=medium
+
+  * Initial release.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 10 Feb 2014 14:44:23 +0200  
