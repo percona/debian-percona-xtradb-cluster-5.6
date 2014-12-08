@@ -6,8 +6,8 @@
 #
 msgid ""
 msgstr ""
-"Report-Msgid-Bugs-To: percona-server-5.6@packages.debian.org\n"
-"POT-Creation-Date: 2011-11-08 11:42-0800\n"
+"Report-Msgid-Bugs-To: percona-xtradb-cluster-5.6@packages.debian.org\n"
+"POT-Creation-Date: 2014-12-08 09:58-0700\n"
 "PO-Revision-Date: 2010-11-21 21:30+0100\n"
 "Last-Translator: Eric Spreen <erispre@gmail.com>\n"
 "Language-Team: Debian-Dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -18,30 +18,34 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:2001
+#: ../percona-xtradb-cluster-server-5.6.templates:2001
 msgid "Really proceed with downgrade?"
 msgstr "Wilt u echt een oude versie herstellen?"
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:2001
+#: ../percona-xtradb-cluster-server-5.6.templates:2001
 msgid "A file named /var/lib/mysql/debian-*.flag exists on this system."
 msgstr ""
 "Er bestaat een bestand genaamd /var/lib/mysql/debian-*.flag op dit systeem."
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:2001
+#: ../percona-xtradb-cluster-server-5.6.templates:2001
+#, fuzzy
+#| msgid ""
+#| "Such a file is an indication that a mysql-server package with a higher "
+#| "version has been installed previously."
 msgid ""
-"Such a file is an indication that a mysql-server package with a higher "
-"version has been installed previously."
+"Such file is an indication that a percona-xtradb-cluster-server package with "
+"a higher version has been installed earlier."
 msgstr ""
 "Zulk een bestand geeft aan dat er eerder een pakket mysql-server met een "
 "hogere versie is geinstalleerd."
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:2001
+#: ../percona-xtradb-cluster-server-5.6.templates:2001
 msgid ""
 "There is no guarantee that the version you're currently installing will be "
 "able to use the current databases."
@@ -51,25 +55,27 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../percona-server-5.6.templates:3001
+#: ../percona-xtradb-cluster-server-5.6.templates:3001
 msgid "Important note for NIS/YP users"
 msgstr "Belangrijke opmerking voor gebruikers van NIS/YP"
 
 #. Type: note
 #. Description
-#: ../percona-server-5.6.templates:3001
+#: ../percona-xtradb-cluster-server-5.6.templates:3001
 msgid ""
-"Using MySQL under NIS/YP requires a mysql user account to be added on the "
-"local system with:"
+"To use MySQL, the following entries for users and groups should be added to "
+"the system:"
 msgstr ""
-"Het gebruik van MySQL onder NIS/YP vereist dat een MySQL gebruikersaccount "
-"wordt toegevoegd aan het lokale systeem met:"
 
 #. Type: note
 #. Description
-#: ../percona-server-5.6.templates:3001
+#: ../percona-xtradb-cluster-server-5.6.templates:3001
+#, fuzzy
+#| msgid ""
+#| "You should also check the permissions and ownership of the /var/lib/mysql "
+#| "directory:"
 msgid ""
-"You should also check the permissions and ownership of the /var/lib/mysql "
+"You should also check the permissions and the owner of the /var/lib/mysql "
 "directory:"
 msgstr ""
 "U dient ook de permissies en eigenaren van de map /var/lib/mysql te "
@@ -77,27 +83,38 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:4001
-msgid "Remove all MySQL databases?"
+#: ../percona-xtradb-cluster-server-5.6.templates:4001
+#, fuzzy
+#| msgid "Remove all MySQL databases?"
+msgid "Remove all Percona Server databases?"
 msgstr "Wilt u alle MySQL-databases verwijderen?"
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:4001
+#: ../percona-xtradb-cluster-server-5.6.templates:4001
+#, fuzzy
+#| msgid ""
+#| "The /var/lib/mysql directory which contains the MySQL databases is about "
+#| "to be removed."
 msgid ""
-"The /var/lib/mysql directory which contains the MySQL databases is about to "
-"be removed."
+"The /var/lib/mysql directory which contains the Percona Server databases is "
+"about to be removed."
 msgstr ""
 "De map /var/lib/mysql die de MySQL-databases bevat staat op het punt om "
 "verwijderd te worden."
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:4001
+#: ../percona-xtradb-cluster-server-5.6.templates:4001
+#, fuzzy
+#| msgid ""
+#| "If you're removing the MySQL package in order to later install a more "
+#| "recent version or if a different mysql-server package is already using "
+#| "it, the data should be kept."
 msgid ""
-"If you're removing the MySQL package in order to later install a more recent "
-"version or if a different mysql-server package is already using it, the data "
-"should be kept."
+"If you're removing the Percona Server package in order to later install a "
+"more recent version or if a different percona-xtradb-cluster-server package "
+"is already using it, the data should be kept."
 msgstr ""
 "Als u het MySQL-pakket verwijdert om later een meer recente versie te "
 "installeren of als een ander mysql-server pakket het al gebruikt, zou de "
@@ -105,62 +122,86 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:5001
-msgid "Start the MySQL server on boot?"
+#: ../percona-xtradb-cluster-server-5.6.templates:5001
+#, fuzzy
+#| msgid "Start the MySQL server on boot?"
+msgid "Start the Percona Server daemon on boot?"
 msgstr "Moet MySQL starten als de computer start?"
 
 #. Type: boolean
 #. Description
-#: ../percona-server-5.6.templates:5001
+#: ../percona-xtradb-cluster-server-5.6.templates:5001
+#, fuzzy
+#| msgid ""
+#| "The MySQL server can be launched automatically at boot time or manually "
+#| "with the '/etc/init.d/mysql start' command."
 msgid ""
-"The MySQL server can be launched automatically at boot time or manually with "
-"the '/etc/init.d/mysql start' command."
+"The Percona Server daemon can be launched automatically at boot time or "
+"manually with the '/etc/init.d/mysql start' command."
 msgstr ""
 "De MySQL-server kan automatisch worden gestart bij het starten van de "
 "computer of slechts wanneer u '/etc/init.d/mysql start' handmatig uitvoert."
 
 #. Type: password
 #. Description
-#: ../percona-server-5.6.templates:6001
-msgid "New password for the MySQL \"root\" user:"
+#: ../percona-xtradb-cluster-server-5.6.templates:6001
+#, fuzzy
+#| msgid "New password for the MySQL \"root\" user:"
+msgid "New password for the Percona Server \"root\" user:"
 msgstr "Nieuw wachtwoord voor de MySQL \"root\"-gebruiker:"
 
 #. Type: password
 #. Description
-#: ../percona-server-5.6.templates:6001
+#: ../percona-xtradb-cluster-server-5.6.templates:6001
+#, fuzzy
+#| msgid ""
+#| "While not mandatory, it is highly recommended that you set a password for "
+#| "the MySQL administrative \"root\" user."
 msgid ""
 "While not mandatory, it is highly recommended that you set a password for "
-"the MySQL administrative \"root\" user."
+"the Percona Server administrative \"root\" user."
 msgstr ""
 "Hoewel niet verplicht, wordt het sterk aangeraden een wachtwoord in te "
 "stellen voor de administratieve MySQL \"root\"-gebruiker."
 
 #. Type: password
 #. Description
-#: ../percona-server-5.6.templates:6001
-msgid "If this field is left blank, the password will not be changed."
+#: ../percona-xtradb-cluster-server-5.6.templates:6001
+#, fuzzy
+#| msgid "If this field is left blank, the password will not be changed."
+msgid "If that field is left blank, the password will not be changed."
 msgstr ""
 "Als dit veld leeg wordt gelaten, zal het wachtwoord niet worden veranderd."
 
 #. Type: password
 #. Description
-#: ../percona-server-5.6.templates:7001
-msgid "Repeat password for the MySQL \"root\" user:"
+#: ../percona-xtradb-cluster-server-5.6.templates:7001
+#, fuzzy
+#| msgid "Repeat password for the MySQL \"root\" user:"
+msgid "Repeat password for the Percona Server \"root\" user:"
 msgstr "Herhaal het wachtwoord voor de MySQL \"root\"-gebruiker:"
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:8001
-msgid "Unable to set password for the MySQL \"root\" user"
+#: ../percona-xtradb-cluster-server-5.6.templates:8001
+#, fuzzy
+#| msgid "Unable to set password for the MySQL \"root\" user"
+msgid "Unable to set password for the Percona Server \"root\" user"
 msgstr "Kan het wachtwoord voor de MySQL \"root\"-gebruiker niet instellen"
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:8001
+#: ../percona-xtradb-cluster-server-5.6.templates:8001
+#, fuzzy
+#| msgid ""
+#| "An error occurred while setting the password for the MySQL administrative "
+#| "user. This may have happened because the account already has a password, "
+#| "or because of a communication problem with the MySQL server."
 msgid ""
-"An error occurred while setting the password for the MySQL administrative "
-"user. This may have happened because the account already has a password, or "
-"because of a communication problem with the MySQL server."
+"An error occurred while setting the password for the Percona Server "
+"administrative user. This may have happened because the account already has "
+"a password, or because of a communication problem with the Percona Server "
+"daemon."
 msgstr ""
 "Er is een fout opgetreden bij het instellen van het wachtwoord voor de MySQL "
 "administratieve gebruiker. Dat kan komen doordat de gebruiker al een "
@@ -169,7 +210,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:8001
+#: ../percona-xtradb-cluster-server-5.6.templates:8001
 msgid "You should check the account's password after the package installation."
 msgstr ""
 "U zou het wachtwoord van het account moeten controleren nadat het pakket is "
@@ -177,27 +218,27 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:8001
+#: ../percona-xtradb-cluster-server-5.6.templates:8001
 #, fuzzy
 #| msgid ""
 #| "Please read the /usr/share/doc/mysql-server-5.1/README.Debian file for "
 #| "more information."
 msgid ""
-"Please read the /usr/share/doc/percona-server-5.6/README.Debian file for more "
-"information."
+"Please read the /usr/share/doc/percona-xtradb-cluster-server-5.6/README."
+"Debian file for more information."
 msgstr ""
 "Leest u het bestand /usr/share/doc/mysql-server-5.1/README.Debian voor meer "
 "informatie."
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:9001
+#: ../percona-xtradb-cluster-server-5.6.templates:9001
 msgid "Password input error"
 msgstr "Fout bij invoer wachtwoord"
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:9001
+#: ../percona-xtradb-cluster-server-5.6.templates:9001
 msgid "The two passwords you entered were not the same. Please try again."
 msgstr ""
 "De twee wachtwoorden die u hebt ingevoerd zijn niet gelijk. Probeert u het "
@@ -205,26 +246,33 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:10001
+#: ../percona-xtradb-cluster-server-5.6.templates:10001
 msgid "NDB Cluster seems to be in use"
 msgstr "De NDB-cluster lijkt in gebruik te zijn"
 
 #. Type: error
 #. Description
-#: ../percona-server-5.6.templates:10001
+#: ../percona-xtradb-cluster-server-5.6.templates:10001
 #, fuzzy
 #| msgid ""
 #| "MySQL-5.1 no longer provides NDB Cluster support. Please migrate to the "
 #| "new mysql-cluster-server package and remove all lines starting with \"ndb"
 #| "\" from all config files below /etc/mysql/."
 msgid ""
-"Percona-Server-5.6 no longer provides NDB Cluster support. Please migrate to the new "
-"mysql-cluster-server package and remove all lines starting with \"ndb\" from "
-"all config files below /etc/mysql/."
+"percona-xtradb-cluster-5.6 has orphaned NDB Cluster support. Please migrate "
+"to the new mysql-cluster package and remove all lines starting with \"ndb\" "
+"from all config files below /etc/mysql/."
 msgstr ""
 "MySQL-5.1 biedt niet langer ondersteuning voor NDB Cluster. Migreer naar het "
 "nieuwe pakket mysql-cluster en verwijder alle regels die beginnen met \"ndb"
 "\" van alle configuratiebestanden onder /etc/mysql/."
+
+#~ msgid ""
+#~ "Using MySQL under NIS/YP requires a mysql user account to be added on the "
+#~ "local system with:"
+#~ msgstr ""
+#~ "Het gebruik van MySQL onder NIS/YP vereist dat een MySQL "
+#~ "gebruikersaccount wordt toegevoegd aan het lokale systeem met:"
 
 #~ msgid ""
 #~ "Support MySQL connections from hosts running Debian \"sarge\" or older?"

@@ -190,8 +190,6 @@ clean-patched:
 	rm -rf $(builddir)
 	rm -rf $(builddebug)
 
-	debconf-updatepo
-	# rm -f $(EXPORTED_SOURCE_TARBALL)
 	dh_clean -v
 
 
