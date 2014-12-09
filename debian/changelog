@@ -1,6 +1,7 @@
 percona-xtradb-cluster-5.6 (5.6.21-25.8-1) unstable; urgency=medium
 
-  * New upstream version and packaging.
+  * New upstream version and packaging. Old 5.5 packaging completely replaced
+    with new packaging based on upstream PXC packages.
 
  -- George Ormond Lorch III <george.lorch@percona.com>  Tue, 02 Dec 2014 13:20:01 -0700
 

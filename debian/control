@@ -28,13 +28,13 @@ Build-Depends: bison,
                psmisc,
                python,
                zlib1g-dev (>= 1:1.1.3-5)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://www.percona.com/software/percona-xtradb-cluster/
-Vcs-Bzr: lp:percona-xtradb-cluster/5.6
+Vcs-Git: git://github.com/percona/debian-percona-server-5.6.git
 
 Package: percona-xtradb-cluster-server-5.6
 Architecture: any
-Suggests: netcat-openbsd, pv, qpress, tinyca
+Suggests: netcat-openbsd, pv, qpress
 Pre-Depends: adduser (>= 3.4.0),
              debconf,
              percona-xtradb-cluster-common-5.6 (>= ${source:Version})
@@ -57,7 +57,9 @@ Depends: iproute,
 Provides: mysql-server, virtual-mysql-server, virtual-mysql-server-core
 Breaks: mariadb-server,
         mariadb-server-5.5,
+        mariadb-server-10.0,
         mariadb-server-core-5.5,
+        mariadb-server-core-10.0,
         mysql-server-5.0,
         mysql-server-5.1,
         mysql-server-5.5,
@@ -71,7 +73,9 @@ Breaks: mariadb-server,
         virtual-mysql-server-core
 Replaces: mariadb-server,
           mariadb-server-5.5,
+          mariadb-server-10.0,
           mariadb-server-core-5.5,
+          mariadb-server-core-10.0,
           mysql-server-5.0,
           mysql-server-5.1,
           mysql-server-5.5,
