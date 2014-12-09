@@ -128,7 +128,7 @@ License: GPL-2
 
 Files: storage/HandlerSocket-Plugin-for-MySQL/*
 Copyright: Copyright (c) 2010 DeNA Co.,Ltd.
-License: BSD (3 clause)
+License: BSD-3-clause
 
 Files: UDF/src/*.cc
 Copyright: None, Public Domain
@@ -276,7 +276,7 @@ License: GPL-2+
 
 Files: cmd-line-utils/libedit/*
 Copyright: 1989-1990,1992-1993 The Regents of the University of California.
-License: BSD (3 clause)
+License: BSD-3-clause
 
 Files: cmd-line-utils/libedit/filecomplete.c
  cmd-line-utils/libedit/filecomplete.h
@@ -285,7 +285,7 @@ Files: cmd-line-utils/libedit/filecomplete.c
  cmd-line-utils/libedit/readline.c
  cmd-line-utils/libedit/readline/*
 Copyright: 1997-2001 The NetBSD Foundation Inc
-License: BSD (2 clause)
+License: BSD-2-clause
  This code is derived from software contributed to The NetBSD Foundation
  by Jaromir Dolecek.
  .
@@ -499,7 +499,7 @@ License: PD
 Files: dbug/dbug.c
  dbug/dbug_long.h
 Copyright: 1987 Abandoned Fred Fish
-License: UNKNOWN
+License: public-domain
  N O T I C E
  .
  Copyright Abandoned, 1987, Fred Fish
@@ -527,7 +527,7 @@ License: UNKNOWN
 Files: cmd-line-utils/libedit/np/vis.c
 Copyright: 1989-1993 The Regents of the University of California.
  1999-2005 The NetBSD Foundation Inc
-License: BSD (3 clause)
+License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
  are met:
@@ -554,16 +554,16 @@ License: BSD (3 clause)
 
 Files: scripts/dheadgen.pl
 Copyright: 2008-2009 Sun Microsystems Inc
-License: BSD (3 clause)
+License: BSD-3-clause
 
 Files: storage/ndb/test/src/getarg.c
 Copyright: 1997-2000 - Kungliga Tekniska Hogskolan
-License: BSD (3 clause)
+License: BSD-3-clause
 
 Files: storage/ndb/test/include/getarg.h
 Copyright: 2003 MySQL AB
  1997-1999 Kungliga Tekniska Hogskolan
-License: BSD (3 clause) GPL-2
+License: BSD-3-clause or GPL-2
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; version 2 of the License.
@@ -697,6 +697,66 @@ License: BSD-like
  3. Altered versions must be plainly marked as such, and must not
     be misrepresented as being the original software.
 
+Files: *
+Copyright: 2010 Eric Bergen
+License: BSD-3-clause
+ Portions of this software contain modifications contributed by Eric Bergen.
+ These contributions are used with the following license:
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+Files: *
+Copyright: 2010, Venu Anuganti, http://venublog.com/
+License: BSD-3-clause
+ Portions of this software contain modifications contributed by Eric Bergen.
+ These contributions are used with the following license:
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
 License: PD
  This software is in the Public Domain.
 
@@ -761,7 +821,7 @@ License: LGPL
  License version 2 can be found in the file
  `/usr/share/common-licenses/LGPL-2`
 
-License: BSD (3 clause)
+License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
  are met:
