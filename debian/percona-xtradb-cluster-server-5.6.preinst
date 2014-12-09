@@ -165,18 +165,6 @@ find $DATADIR -follow -not -group mysql -print0 2>/dev/null \
   | xargs -0 --no-run-if-empty chgrp mysql
 set -e
 
-# Some files below /etc/ were possibly in the percona-xtradb-cluster-server-5.0/etch package
-# before. They get overwritten by current ones to avoid unnecessary dpkg questions.
-while read md5 file; do
-  if [ "`md5sum $file 2>/dev/null`" = "$md5  $file" ]; then
-    cp /usr/share/percona-xtradb-cluster-common/internal-use-only/`echo $file | sed 's°/°_°g'` $file
-  fi
-done <<EOT
-6691f2fdc5c6d27ff0260eb79813e1bc  /etc/init.d/mysql
-b53b9552d44661361d39157c3c7c51d3  /etc/logrotate.d/percona-xtradb-cluster-server
-57f3e58f72582ca55100dc1ba0f1a8ae  /etc/mysql/debian-start
-EOT
-
 db_stop
 
 #DEBHELPER#
