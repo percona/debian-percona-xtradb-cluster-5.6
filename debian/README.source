@@ -1,0 +1,8 @@
+DFSG and repacking
+==================
+The upstream source tarball from percona.com contains some files that are not
+DFSG-compliant.
+
+To use this to download the current tarball (as indicated by debian/changelog)
+run 'debian/repack.sh <tarball>' on this file from within the top-level
+directory.
