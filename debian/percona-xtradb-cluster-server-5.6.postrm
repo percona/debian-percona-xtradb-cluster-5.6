@@ -47,6 +47,14 @@ case "$1" in
   ;;
 esac
 
+# New packaging paradigm for my.cnf as of Dec-2014 for sharing mysql
+# variants in Ubuntu.
+case "$1" in
+  remove|disappear)
+    /usr/share/mysql-comon/configure-symlinks remove percona-xtradb-cluster "$mysql_cfgdir/percona-xtradb-cluster.cnf"
+  ;;
+esac
+
 #
 # - Do NOT purge logs or data if another percona-xtradb-cluster-server* package is installed (#307473)
 # - Remove the mysql user only after all his owned files are purged.
@@ -67,20 +75,7 @@ if [ "$1" = "purge" -a ! \( -x /usr/sbin/mysqld -o -L /usr/sbin/mysqld \) ]; the
     rm -rf /var/run/mysqld
     userdel mysql || true
   fi
-
-  # (normally) Automatically added by dh_installinit
-  if [ "$1" = "purge" ] ; then
-        update-rc.d mysql remove >/dev/null || exit 0
-  fi
-  # (normally) End automatically added section
 fi
-
-# (normally) Automatically added by dh_installdebconf
-if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
-        . /usr/share/debconf/confmodule
-        db_purge
-fi
-# (normally) End automatically added section
 
 #DEBHELPER#
 

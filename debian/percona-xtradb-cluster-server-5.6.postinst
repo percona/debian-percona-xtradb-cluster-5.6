@@ -70,6 +70,10 @@ case "$1" in
     mysql_newlogdir=/var/log/mysql
     mysql_upgradedir=/var/lib/mysql-upgrade
 
+    # New packaging paradigm for my.cnf as of Dec-2014 for sharing mysql
+    # variants in Ubuntu.
+    /usr/share/mysql-comon/configure-symlinks install percona-xtradb-cluster "$mysql_cfgdir/percona-xtradb-cluster.cnf"
+
     # first things first, if the following symlink exists, it is a preserved
     # copy the old data dir from a mysql upgrade that would have otherwise
     # been replaced by an empty mysql dir.  this should restore it.
