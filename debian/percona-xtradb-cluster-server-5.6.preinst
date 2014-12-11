@@ -15,7 +15,7 @@ ${DEBIAN_SCRIPT_TRACE:+ echo "#42#DEBUG# RUNNING $0 $*" 1>&2 }
 
 export PATH=$PATH:/sbin:/usr/sbin:/bin:/usr/bin
 MYADMIN="/usr/bin/mysqladmin --defaults-file=/etc/mysql/debian.cnf"
-DATADIR=/var/lib/mysql
+DATADIR=/var/lib/percona-xtradb-cluster
 LOGDIR=/var/log/mysql
 UPGRADEDIR=/var/lib/mysql-upgrade
 

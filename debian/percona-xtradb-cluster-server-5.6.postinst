@@ -63,7 +63,7 @@ set +e; invoke stop; set -e
 case "$1" in
   configure)
     mysql_datadir=/usr/share/mysql
-    mysql_statedir=/var/lib/mysql
+    mysql_statedir=/var/lib/percona-xtradb-cluster
     mysql_rundir=/var/run/mysqld
     mysql_logdir=/var/log
     mysql_cfgdir=/etc/mysql

@@ -75,7 +75,7 @@ sanity_checks() {
 
 # Get the pid file
 mysql_data_dir=$(mysqld_get_param datadir)
-[ ! $mysql_data_dir ] && mysql_data_dir="/var/lib/mysql"
+[ ! $mysql_data_dir ] && mysql_data_dir="/var/lib/percona-xtradb-cluster"
 
 pid_file=$(mysqld_get_param pid-file)
 
