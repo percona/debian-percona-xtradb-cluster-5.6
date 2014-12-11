@@ -1,0 +1,13 @@
+#
+# The Percona XtraDB Cluster 5.6 configuration file.
+#
+# 
+# One can use all long options that the program supports.
+# Run program with --help to get a list of available options and with
+# --print-defaults to see which it would actually understand and use.
+#
+# For explanations see
+# http://dev.mysql.com/doc/mysql/en/server-system-variables.html
+
+[isamchk]
+key_buffer		= 16M

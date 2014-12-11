@@ -1,0 +1,118 @@
+#
+# The Percona XtraDB Cluster 5.6 configuration file.
+#
+# 
+# One can use all long options that the program supports.
+# Run program with --help to get a list of available options and with
+# --print-defaults to see which it would actually understand and use.
+#
+# For explanations see
+# http://dev.mysql.com/doc/mysql/en/server-system-variables.html
+
+[mysqld]
+#
+# * Basic Settings
+#
+user		= mysql
+pid-file	= /var/run/mysqld/mysqld.pid
+socket		= /var/run/mysqld/mysqld.sock
+port		= 3306
+basedir		= /usr
+datadir		= /var/lib/percona-xtradb-cluster
+tmpdir		= /tmp
+lc-messages-dir	= /usr/share/mysql
+skip-external-locking
+#
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+bind-address		= 127.0.0.1
+#
+# * Fine Tuning
+#
+key_buffer		= 16M
+max_allowed_packet	= 16M
+thread_stack		= 192K
+thread_cache_size       = 8
+# This replaces the startup script and checks MyISAM tables if needed
+# the first time they are touched
+myisam-recover         = BACKUP
+#max_connections        = 100
+#table_cache            = 64
+#thread_concurrency     = 10
+#
+# * Query Cache Configuration
+#
+query_cache_limit	= 1M
+query_cache_size        = 16M
+#
+# * Logging and Replication
+#
+# Both location gets rotated by the cronjob.
+# Be aware that this log type is a performance killer.
+# As of 5.1 you can enable the log at runtime!
+#general_log_file        = /var/log/mysql/mysql.log
+#general_log             = 1
+#
+# Error log - should be very few entries.
+#
+log_error = /var/log/mysql/error.log
+#
+# Here you can see queries with especially long duration
+#log_slow_queries	= /var/log/mysql/mysql-slow.log
+#long_query_time = 2
+#log-queries-not-using-indexes
+#
+# The following can be used as easy to replay backup logs or for replication.
+# note: if you are setting up a replication slave, see README.Debian about
+#       other settings you may need to change.
+#server-id		= 1
+expire_logs_days	= 10
+max_binlog_size         = 100M
+#binlog_do_db		= include_database_name
+#binlog_ignore_db	= include_database_name
+#
+# * InnoDB
+#
+# InnoDB is enabled by default with a 10MB datafile in
+# /var/lib/percona-xtradb-cluster.
+# Read the manual for more InnoDB related options. There are many!
+#
+# * Security Features
+#
+# Read the manual, too, if you want chroot!
+# chroot = /var/lib/percona-xtradb-cluster
+#
+# For generating SSL certificates I recommend the OpenSSL GUI "tinyca".
+#
+# ssl-ca=/etc/mysql/cacert.pem
+# ssl-cert=/etc/mysql/server-cert.pem
+# ssl-key=/etc/mysql/server-key.pem
+#
+# * Galera
+#
+# Path to Galera library
+#wsrep_provider=/usr/lib/libgalera_smm.so
+#
+# Add address of other cluster nodes here
+#wsrep_cluster_address=gcomm://aaa.bbb.ccc.ddd,aaa.bbb.ccc.ddd
+#log_bin
+# In order for Galera to work correctly binlog format should be ROW
+#binlog_format=ROW
+#
+# MyISAM storage engine has only experimental support
+#default_storage_engine=InnoDB
+#
+# This changes how InnoDB autoincrement locks are managed and is a requirement for Galera
+#innodb_autoinc_lock_mode=2
+#
+# Node #1 address
+#wsrep_node_address=aaa.bbb.ccc.ddd
+#
+# SST method
+#wsrep_sst_method=xtrabackup-v2
+#
+# Cluster name
+#wsrep_cluster_name=my_ubuntu_cluster
+#
+# Authentication for SST method
+#wsrep_sst_auth="sstuser:s3cretPass"
