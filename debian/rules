@@ -5,8 +5,6 @@ export DEB_BUILD_HARDENING=1
 
 include DEB-VERSION
 
-PACKAGE=percona-xtradb-cluster-5.6
-
 TMP=$(CURDIR)/debian/tmp/
 TMPD=$(CURDIR)/debian/tmp-debug/
 prefix=/usr
@@ -36,7 +34,6 @@ comment_version="$(MYSQL_VERSION_MAJOR).$(MYSQL_VERSION_MINOR).$(MYSQL_VERSION_P
 compilation_comment_release="Percona XtraDB Cluster (GPL), Release $(comment_version)"
 compilation_comment_debug="Percona XtraDB Cluster - Debug (GPL), Release $(comment_version)"
 server_suffix="-$(MYSQL_VERSION_EXTRA)"
-prefix=/usr
 
 MYSQL_SRC = $(shell pwd)
 
