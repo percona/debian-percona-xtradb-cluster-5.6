@@ -57,5 +57,5 @@ usr/share/man/man1/mysqlman.1
 usr/share/man/man8/mysqld.8
 usr/share/mysql
 etc/xinetd.d/mysqlchk
-etc/mysql/debian-start
+etc/mysql/percona-xtradb-cluster/debian-start
 usr/share/mysql/debian-start.inc.sh

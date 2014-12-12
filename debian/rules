@@ -242,7 +242,8 @@ install: build
 	       $(TMP)/usr/share/percona-xtradb-cluster/binary-configure
 	nm -n $(builddir)/sql/mysqld |gzip -9 > $(TMP)/usr/share/doc/percona-xtradb-cluster-5.6/mysqld.sym.gz
 	# FIXME install -m 0755 debian/additions/echo_stderr $(TMP)/usr/share/mysql/
-	install -m 0755 debian/additions/debian-start $(TMP)/etc/mysql/
+	mkdir -p $(TMP)/ete/mysql/percona-xtradb-cluster
+	install -m 0755 debian/additions/debian-start $(TMP)/etc/mysql/percona-xtradb-cluster
 	install -m 0755 debian/additions/debian-start.inc.sh $(TMP)/usr/share/mysql/
 
 	# install AppArmor profile

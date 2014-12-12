@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This file is included by /etc/mysql/debian-start
+# This file is included by /etc/mysql/percona-xtradb-cluster/debian-start
 #
 
 ## Check all unclosed tables.

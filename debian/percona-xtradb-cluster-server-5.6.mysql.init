@@ -186,7 +186,7 @@ case "${1:-''}" in
 	        # Now start mysqlcheck or whatever the admin wants.
                 # only if the file /etc/mysql/DEBIAN-START is present.
                 if test -e /etc/mysql/DEBIAN-START;then
-	            output=$(/etc/mysql/debian-start)
+	            output=$(/etc/mysql/percona-xtradb-cluster/debian-start)
                     [ "$output" ] && log_action_msg "$output"
                 fi
             else

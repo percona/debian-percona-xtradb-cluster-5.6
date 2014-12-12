@@ -7,4 +7,5 @@
 #   Please make any edits and changes to the appropriate sectional files
 #   included below.
 #
+!includedir /etc/mysql/conf.d/
 !includedir /etc/mysql/percona-xtradb-cluster.conf.d/
