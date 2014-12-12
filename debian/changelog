@@ -2,8 +2,25 @@ percona-xtradb-cluster-5.6 (5.6.21-25.8-1) unstable; urgency=medium
 
   * New upstream version and packaging. Old 5.5 packaging completely replaced
     with new packaging based on upstream PXC packages.
+  * Removed call to debconf-updatepo during build.
+  * Fixed copyright file and removed lintian-overrides.
+  * Removed marketing type echo statements about UDFs during package install.
+  * Removed non-ascii black magic to deal with old 5.0 from preinst.
+  * Added README.source and reack.sh for turning raw upstream tarball into
+    proper .orig tarball.
+  * Changed rules to source DEB-VERSION file in tarball to obtain all necessary
+    version information.
+  * Fixed dependency on mysql-common for new variant packaging paradigm and
+    added calls to new mysql-common healper scrit to manage symlinks on package
+    install/remove.
+  * Fixed compilation_comment in rules file to reduce number variable
+    assignments.
+  * Removed references to now cleared subunit2junitxml from rules file.
+  * Added new my.conf and .conf.d files to conform to new packaging paradigm and
+    relocate default data directory to /var/lib/percona-xtradb-cluster instead
+    of /var/lib/mysql.
 
- -- George Ormond Lorch III <george.lorch@percona.com>  Tue, 02 Dec 2014 13:20:01 -0700
+ -- George Ormond Lorch III <george.lorch@percona.com>  Tue, 12 Dec 2014 01:00:00 -0700
 
 percona-xtradb-cluster-5.5 (5.5.37-25.10+dfsg-2) unstable; urgency=medium
 
