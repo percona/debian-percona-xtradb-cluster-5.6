@@ -6,6 +6,7 @@ if [ -f /usr/share/debconf/confmodule ]; then
   . /usr/share/debconf/confmodule
 fi
 
+mysql_cfgdir=/etc/mysql
 PERCONA_PREFIX=/usr
 export PATH=$PATH:/sbin:/usr/sbin:/bin:/usr/bin:$PERCONA_PREFIX/bin
 
