@@ -6,7 +6,3 @@ percona-xtradb-cluster-server-5.6: embedded-library usr/sbin/mysqld-debug: libmy
 
 # to supress false positive
 duplicate-updaterc.d-calls-in-postrm
-
-# Upstream MySQL
-percona-xtradb-cluster-server-5.6: manpage-has-errors-from-man usr/share/man/man1/mysqlbinlog.1.gz 1821: warning [p 10, 3.0i, div `3tbd3,2', 0.8i]: can't break line
-
