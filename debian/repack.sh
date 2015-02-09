@@ -63,7 +63,7 @@ do
 done
 
 if [ $# -eq 0 ]; then
-	show_usage 1 "No http location specified"
+	show_usage 1 "No source tarball specified"
 fi
 SOURCE_TAR_FILE=$@;
 
