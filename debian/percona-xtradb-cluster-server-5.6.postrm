@@ -51,7 +51,7 @@ esac
 # variants in Ubuntu.
 case "$1" in
   remove|disappear)
-    /usr/share/mysql-comon/configure-symlinks remove percona-xtradb-cluster "$mysql_cfgdir/percona-xtradb-cluster.cnf"
+    /usr/share/mysql-common/configure-symlinks remove percona-xtradb-cluster "$mysql_cfgdir/percona-xtradb-cluster.cnf"
   ;;
 esac
 
