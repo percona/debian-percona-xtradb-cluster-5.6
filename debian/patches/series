@@ -1,1 +1,2 @@
 scripts__mysqld_safe.sh__signals.patch
+fix_mtr_ssl_cert.patch
