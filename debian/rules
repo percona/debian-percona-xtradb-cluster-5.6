@@ -290,8 +290,7 @@ binary-arch: build install
 	dh_testdir 
 	dh_testroot
 
-	dh_install -i
-	dh_installdebconf -i
+	dh_install -a
 	dh_installdebconf -a
 	dh_installdocs -a
 	dh_installexamples -a
